@@ -87,7 +87,7 @@ if enviar:
     area_total = sum(g[4] for g in grupos)
     total_condutores = sum(g[1] for g in grupos)
     ocupacao_limite = 0.4 if total_condutores >= 3 else (0.31 if total_condutores == 2 else 0.53)
-    area_requerida = area_total / ocupacao_limite
+    area_requerida = area_total  # A tabela já considera os 40% da NBR 5410
 
     resultado = None
     for diam, area in eletrodutos[tipo_eletroduto].items():
